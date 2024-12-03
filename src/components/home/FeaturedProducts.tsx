@@ -40,7 +40,7 @@ export default function FeaturedProducts() {
                 <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                 <p className="text-gray-600 mb-4">{product.description}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-xl font-bold">${product.price}</span>
+                  <span className="text-xl font-bold">GHS {product.price}</span>
                   <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800">
                     View Details
                   </button>
