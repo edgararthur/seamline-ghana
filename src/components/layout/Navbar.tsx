@@ -1,7 +1,9 @@
 import { Menu, ShoppingBag, User } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "@fontsource/poppins"; // Import the Poppins font
+import "@fontsource/poppins";
+
+import Logo from "../../assets/logo.svg";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,20 +21,26 @@ export default function Navbar() {
   const isActive = (path: string) => location.pathname === path;
 
   const linkStyles = (active: boolean) =>
-    `text-lg ${active ? "text-blue-600 font-semibold" : "text-gray-700 hover:text-blue-600"}`;
+    `text-sm ${
+      active
+        ? "text-[#5177C9] font-semibold"
+        : "text-[#3a3a3a] hover:text-[#5177C9]" // Dark gray with hover effect
+    }`;
 
-  const iconStyles = "h-5 w-5 text-gray-700 hover:text-blue-600";
+  const iconStyles = "h-5 w-5 text-[#4A4A4A] hover:text-[#5177C9]";
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50 py-4 font-poppins">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-[#F7F7F7] shadow-sm sticky top-0 z-50 py-1 font-poppins">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link to="/" className="flex items-center">
-            <h1 className="text-2xl font-bold text-blue-700">Seamline Ghana</h1>
+            <img
+              src={Logo}
+              alt="Logo"
+              className="w-200 h-200 md:h-12"
+            />
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map(({ path, label }) => (
               <Link key={path} to={path} className={linkStyles(isActive(path))}>
@@ -43,14 +51,14 @@ export default function Navbar() {
 
           {/* Icons and Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <button className="p-2 hover:bg-gray-100 rounded-full">
+            <button className="p-2 hover:bg-[#e1ebff] rounded-full">
               <User className={iconStyles} />
             </button>
-            <button className="p-2 hover:bg-gray-100 rounded-full">
+            <button className="p-2 hover:bg-[#e1ebff] rounded-full">
               <ShoppingBag className={iconStyles} />
             </button>
             <button
-              className="md:hidden p-2 hover:bg-gray-100 rounded-full"
+              className="md:hidden p-2 hover:bg-[#EAEAEA] rounded-full"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle Menu"
             >
