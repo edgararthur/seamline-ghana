@@ -7,11 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "backend": "python manage.py runserver"
   },
   "dependencies": {
     "@fontsource/nunito": "^5.1.0",
     "@fontsource/poppins": "^5.1.0",
+    "axios": "^1.7.8",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

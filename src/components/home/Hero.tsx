@@ -19,7 +19,7 @@ export default function Hero() {
 						Redefining Fashion Accessories,<br />
 						One Stitch at a Time
 					</h1>
-					<p className="text-xl mb-8 max-w-2xl text-center flex align-center justify-center">
+					<p className="text-xl mb-8 text-center word-wrap">
 						Discover our unique collection of handcrafted accessories and apparel,
 						where style meets innovation in every piece.
 					</p>

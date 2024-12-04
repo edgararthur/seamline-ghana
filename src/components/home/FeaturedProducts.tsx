@@ -1,4 +1,5 @@
 import { Product } from '../../types';
+import image1 from '../../assets/image1.png'
 
 const featuredProducts: Product[] = [
   {
@@ -7,7 +8,7 @@ const featuredProducts: Product[] = [
     description: 'Elegant detachable collar with pearl embellishments',
     price: 49.99,
     category: 'accessories',
-    images: ['https://images.unsplash.com/photo-1584030373081-f37b7bb4fa8e'],
+    images: [new File([image1], 'image1.png')],
     inStock: true,
     customizable: true
   },
@@ -17,7 +18,7 @@ const featuredProducts: Product[] = [
     description: 'Modern cape design perfect for any occasion',
     price: 129.99,
     category: 'apparel',
-    images: ['https://images.unsplash.com/photo-1539109136881-3be0616acf4b'],
+    images: [new File([image1], 'image1.png')],
     inStock: true,
     customizable: true
   }
@@ -32,8 +33,8 @@ export default function FeaturedProducts() {
           {featuredProducts.map((product) => (
             <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
               <img
-                src={product.images[0]}
-                alt={product.name}
+                src={product.images[0].image}
+                alt={product.images[0].alt_text}
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">

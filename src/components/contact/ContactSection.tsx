@@ -15,7 +15,7 @@ export default function ContactSection() {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Phone className="h-6 w-6 text-black mr-4" />
-                <span>+233 20 123 4567</span>
+                <span>+233 55 950 0624</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-6 w-6 text-black mr-4" />
@@ -28,7 +28,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <form className="space-y-6">
+          <form className="space-y-6 text-gray-700">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                 Full Name
@@ -36,7 +36,7 @@ export default function ContactSection() {
               <input
                 type="text"
                 id="name"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-black focus:border-black"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-black focus:border-black outline-none text-sm"
                 placeholder="Your name"
               />
             </div>
@@ -47,7 +47,7 @@ export default function ContactSection() {
               <input
                 type="email"
                 id="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-black focus:border-black"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-black focus:border-black outline-none text-sm"
                 placeholder="your@email.com"
               />
             </div>
@@ -58,7 +58,7 @@ export default function ContactSection() {
               <textarea
                 id="message"
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-black focus:border-black"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-black focus:border-black outline-none text-sm"
                 placeholder="Your message"
               ></textarea>
             </div>

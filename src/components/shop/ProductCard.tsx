@@ -10,11 +10,11 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <div className="relative">
         <img
-          src={product.images[0]}
-          alt={product.name}
+          src={product.images[0].image}
+          alt={product.images[0].alt_text}
           className="w-full h-64 object-cover"
         />
-        <button className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">
+        <button className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-white hover:text-red-400">
           <Heart className="h-5 w-5" />
         </button>
       </div>
@@ -22,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
         <p className="text-gray-600 text-sm mb-4">{product.description}</p>
         <div className="flex justify-between items-center">
-          <span className="text-xl font-bold">${product.price}</span>
+          <span className="text-xl font-bold">GHS {product.price}</span>
           <button className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800">
             <ShoppingBag className="h-5 w-5" />
             <span>Add to Cart</span>

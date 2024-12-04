@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "@fontsource/poppins";
 
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/logo-1.png";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,8 +37,9 @@ export default function Navbar() {
             <img
               src={Logo}
               alt="Logo"
-              className="w-200 h-200 md:h-12"
+              className="w-95 h-98 md:w-20 md:h-12"
             />
+            <h1 className="text-lg font-medium text-gray-800">Seamline Ghana</h1>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
